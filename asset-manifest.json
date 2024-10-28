@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/sala-virtual/static/css/main.0b0b51af.css",
+    "main.js": "/sala-virtual/static/js/main.313cfd02.js",
+    "static/js/453.cfcd6efd.chunk.js": "/sala-virtual/static/js/453.cfcd6efd.chunk.js",
+    "index.html": "/sala-virtual/index.html",
+    "main.0b0b51af.css.map": "/sala-virtual/static/css/main.0b0b51af.css.map",
+    "main.313cfd02.js.map": "/sala-virtual/static/js/main.313cfd02.js.map",
+    "453.cfcd6efd.chunk.js.map": "/sala-virtual/static/js/453.cfcd6efd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0b0b51af.css",
+    "static/js/main.313cfd02.js"
+  ]
+}
