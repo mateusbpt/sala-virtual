@@ -1,26 +1,42 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from 'react';
+import Phaser from 'phaser';
+import MainScene from './scenes/MainScene';
+import'./App.css'
 
-function App() {
+const App: React.FC = () => {
+  useEffect(() => {
+    document.title = "Sala Virtual";
+    const config: Phaser.Types.Core.GameConfig = {
+      type: Phaser.AUTO,
+      width: 800,
+      height: 600,
+      scale: {
+        autoCenter: Phaser.Scale.CENTER_HORIZONTALLY
+      },
+      physics: {
+        default: 'arcade',
+        arcade: {
+          debug: false
+        }
+      },
+      scene: MainScene
+    };
+
+    const game = new Phaser.Game(config);
+
+    return () => {
+      game.destroy(true);
+    };
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <div className="header">
+        <h1>SALA VIRTUAL</h1>
+      </div>
+      <div id="game-container"></div>
     </div>
   );
-}
+};
 
 export default App;
